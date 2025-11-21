@@ -6,4 +6,5 @@ const preview = document.getElementById('preview')
 
 topRight.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
+    preview.style.borderBottomRightRadius = `${value}px`
 })
