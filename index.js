@@ -8,7 +8,11 @@ const preview = document.getElementById('preview')
 const pTopRight = document.getElementById('ptop-right')
 const pTopLeft = document.getElementById('ptop-left')
 const pBottomRight = document.getElementById('pbottom-right')
-const pBottomLeft = document.getElementById('pBottomLeft')
+const pBottomLeft = document.getElementById('pbottom-left')
+
+const copyAll = document.querySelector('.p-container') 
+const ps = copyAll.querySelectorAll('p');
+
 
 topRight.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
@@ -31,5 +35,20 @@ bottomRight.addEventListener('input', (inputValue) => {
 bottomLeft.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
     preview.style.borderBottomLeftRadius = `${value}px`
-    pTopRight.textContent = `border-bottom-left-radius: ${value} px;`
+    pBottomLeft.textContent = `border-bottom-left-radius: ${value} px;`
 })
+
+function copyText() {
+    let textToCopy = ''
+    ps.forEach(p => {
+        if (p.textContent !== '') {
+            textToCopy += p.textContent + '\n'
+        }
+    })
+    if (textToCopy === '') {
+        alert('There is no text to copy!')
+    } else {
+        console.log(textToCopy)
+        navigator.clipboard.writeText(textToCopy)
+    }
+}
