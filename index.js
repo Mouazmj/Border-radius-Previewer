@@ -5,7 +5,10 @@ const bottomLeft = document.getElementById('bottom-left')
 
 const preview = document.getElementById('preview')
 
-
+const pTopRight = document.getElementById('ptop-right')
+const pTopLeft = document.getElementById('ptop-left')
+const pBottomRight = document.getElementById('pbottom-right')
+const pBottomLeft = document.getElementById('pBottomLeft')
 
 topRight.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
