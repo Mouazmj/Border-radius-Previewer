@@ -13,19 +13,23 @@ const pBottomLeft = document.getElementById('pBottomLeft')
 topRight.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
     preview.style.borderTopRightRadius = `${value}px`
+    pTopRight.textContent = `border-top-right-radius: ${value} px;`
 })
 
 topLeft.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
     preview.style.borderTopLeftRadius = `${value}px`
+    pTopLeft.textContent = `border-top-left-radius: ${value} px;`
 })
 
 bottomRight.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
     preview.style.borderBottomRightRadius = `${value}px`
+    pBottomRight.textContent = `border-bottom-right-radius: ${value} px;`
 })
 
 bottomLeft.addEventListener('input', (inputValue) => {
     const value = inputValue.target.value
     preview.style.borderBottomLeftRadius = `${value}px`
+    pTopRight.textContent = `border-bottom-left-radius: ${value} px;`
 })
